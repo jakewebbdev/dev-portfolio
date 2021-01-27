@@ -5,15 +5,19 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      //gray: colors.trueGray,
-      gray: colors.warmGray,
+      gray: colors.trueGray,
+      //gray: colors.warmGray,
       //gray: colors.coolGray,
       //gray: colors.blueGray,
       armygreen: "#4b5320",
       armybrown: "#c19a6b",
       white: colors.white,
-      black: colors.black,
       cream: "#f4f2dc",
+      lightgray: "#e6e6e6",
+      camel: "#c5a880",
+      brown: "#532e1c",
+      black: "#0f0f0f",
+      lightbrown: "#80461b",
     },
   },
   variants: {
