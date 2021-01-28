@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../images/logos/empty-logo-transparent.svg";
 
 const Landing = () => {
   return (
@@ -33,6 +34,11 @@ const Landing = () => {
               </span>
             </Link>
           </div>
+        </div>
+        <div className="absolute bottom-2 left-2">
+          <Link to="/about">
+            <Logo className="h-12 w-12" />
+          </Link>
         </div>
       </div>
     </section>
