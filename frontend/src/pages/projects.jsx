@@ -1,10 +1,15 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen">
-      <div>
-        <p>Projects</p>
+    <div className="min-h-screen">
+      <Navbar />
+      <div className="pt-20 min-h-screen container mx-auto">
+        <h1>Projects</h1>
       </div>
-    </section>
+      <Footer />
+    </div>
   );
 };
 

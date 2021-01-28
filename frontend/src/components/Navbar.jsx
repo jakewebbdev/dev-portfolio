@@ -1,32 +1,29 @@
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../images/logos/empty-logo.svg";
+
 const Navbar = () => {
   return (
-    <nav className="w-full fixed bg-lightgray">
-      <div className="container mx-auto py-6">
-        <div className="flex justify-between px-4">
-          <div>Logo</div>
-          <div className="space-x-6">
-            <a
-              href="#about"
-              className="text-xl uppercase font-bold font-mono text-black hover:text-lightbrown focus:outline-none"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="text-xl uppercase font-bold font-mono text-black hover:text-lightbrown focus:outline-none"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-xl uppercase font-bold font-mono text-black hover:text-lightbrown focus:outline-none"
-            >
-              Contact Me
-            </a>
-          </div>
-        </div>
+    <header className="lg:px-16 px-6 bg-white flex flex-wrap items-cetner lg:py-0 py-2">
+      <div className="flex-1 flex justify-between items-center">
+        <Link to="/about">
+          <Logo className="h-16 w-16" />
+        </Link>
       </div>
-    </nav>
+      <div
+        className="hidden lg:flex lg:items-center lg:w-auto w-full"
+        id="menu"
+      >
+        <nav>
+          <ul className="lg:flex items-center justify-between text-base text-black pt-4 lg:pt-0">
+            <li>
+              <Link to="/about">About</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/contact">Contact Me</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Landing = () => {
   return (
     <section id="landing">
@@ -10,8 +12,8 @@ const Landing = () => {
             I'm a Full Stack Web Developer.
           </p>
           <div className="flex items-center justify-center pt-6">
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="border-2 rounded border-black px-6 py-2 inline-block align-middle"
             >
               <span>View some of my projects!</span>
@@ -29,7 +31,7 @@ const Landing = () => {
                   />
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
