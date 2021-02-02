@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../images/logos/empty-logo-transparent.svg";
+import { NavLink, Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../images/logos/jw-empty-bacground-white.svg";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -8,6 +8,10 @@ const Navbar = () => {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const turnOff = () => {
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -23,38 +27,56 @@ const Navbar = () => {
   return (
     <header
       className={
-        "border-black fixed w-full bg-lightgray " +
+        "border-smokey fixed w-full bg-black " +
         `${isScroll ? "border-b-2" : "border-none"}`
       }
     >
-      <div className="container mx-auto flex justify-between items-center py-2">
+      <div className="container mx-auto flex justify-between items-center py-2 md:px-0 px-4">
         <div>
           <Link to="/about">
             <Logo className="h-12 w-12" />
           </Link>
         </div>
         <div>
-          <ul
-            className={`md:flex ${
-              isOpen ? "block" : "hidden"
-            } md:justify-between`}
-          >
+          <ul className={`md:flex hidden md:space-x-6 md:static absolute`}>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink
+                to="/about"
+                activeClassName="text-utorange"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <NavLink
+                to="/projects"
+                activeClassName="text-utorange"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+              >
+                Projects
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact Me</Link>
+              <NavLink
+                to="/contact"
+                activeClassName="text-utorange"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+              >
+                Contact Me
+              </NavLink>
             </li>
           </ul>
         </div>
-        <button onClick={handleClick} className="block md:hidden">
+        <button
+          onClick={handleClick}
+          className="block md:hidden focus:outline-none"
+        >
           <svg
-            className="h-6 w-6 fill-current"
+            className="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
+            fill="white"
           >
             {isOpen && (
               <path
@@ -71,6 +93,34 @@ const Navbar = () => {
             )}
           </svg>
         </button>
+      </div>
+      <div class={"w-full md:hidden " + (isOpen ? "block" : "hidden")}>
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <NavLink
+            to="/about"
+            activeClassName="text-utorange bg-gray-900 rounded-md"
+            className="text-white block px-3 py-2 text-base font-medium"
+            onClick={turnOff}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/projects"
+            activeClassName="text-utorange bg-gray-900 rounded-md"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            onClick={turnOff}
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            to="/contact"
+            activeClassName="text-utorange bg-gray-900 rounded-md"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            onClick={turnOff}
+          >
+            Contact Me
+          </NavLink>
+        </div>
       </div>
     </header>
   );

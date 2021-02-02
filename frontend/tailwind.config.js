@@ -18,6 +18,10 @@ module.exports = {
       brown: "#532e1c",
       black: "#0f0f0f",
       lightbrown: "#80461b",
+      green: colors.green,
+      utorange: "#FF8200",
+      uttorch: "#E65933",
+      smokey: "#58595B",
     },
   },
   variants: {

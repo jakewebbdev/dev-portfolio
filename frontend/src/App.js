@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 const Main = withRouter(({ location }) => {
   return (
-    <div className="bg-lightgray">
+    <div className="bg-black">
       {location.pathname !== "/" && <Navbar />}
       <Switch>
         <Route exact path="/" component={Landing} />

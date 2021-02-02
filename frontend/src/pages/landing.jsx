@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../images/logos/empty-logo-transparent.svg";
+import { ReactComponent as Logo } from "../images/logos/jw-empty-bacground-white.svg";
 
 const Landing = () => {
   return (
     <section id="landing">
       <div className="h-screen flex items-center justify-center">
         <div className="space-y-2">
-          <p className="text-6xl text-center">Welcome!</p>
-          <p className="text-2xl">
+          <p className="text-6xl text-center text-white">Welcome!</p>
+          <p className="text-2xl text-white">
             My name is{" "}
-            <span className="text-lightbrown font-semibold">Jake Webb</span>,
-            I'm a Full Stack Web Developer.
+            <span className="text-utorange font-semibold">Jake Webb</span>, I'm
+            a Full Stack Web Developer.
           </p>
           <div className="flex items-center justify-center pt-6">
             <Link
               to="/projects"
-              className="border-2 rounded border-black px-6 py-2 inline-block align-middle"
+              className="border-2 rounded border-smokey px-6 py-2 inline-block align-middle text-white hover:border-utorange"
             >
               <span>View some of my projects!</span>
               <span className="pl-4 flex justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
-                  fill="currentColor"
+                  fill="white"
                   className="h-4 w-4"
                 >
                   <path
@@ -37,7 +37,7 @@ const Landing = () => {
         </div>
         <div className="absolute bottom-2 left-2">
           <Link to="/about">
-            <Logo className="h-12 w-12" />
+            <Logo className="h-20 w-20" />
           </Link>
         </div>
       </div>
