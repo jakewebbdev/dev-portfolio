@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <section id="about" className="min-h-screen w-full">
-      <div className="pt-20 md:container mx-auto text-white px-4 md:px-0">
+      <div className="pt-20 md:container md:mx-auto text-white px-4 md:px-6">
         <div className="flex justify-between border-b-2 border-smokey pb-2">
           <h1 className="text-3xl font-semibold text-utorange">About Me</h1>
           <Link
@@ -68,25 +68,6 @@ const About = () => {
               backend framework. I have worked with MongoDB and PostgreSQL for
               my database.
             </p>
-          </div>
-        </div>
-        <div className="pt-4">
-          <h1 className="text-2xl border-b-2 border-smokey text-utorange">
-            Skills
-          </h1>
-          <div className="flex justify-between">
-            <div>
-              <h1>ReactJS</h1>
-            </div>
-            <div>
-              <h1>ReactJS</h1>
-            </div>
-            <div>
-              <h1>ReactJS</h1>
-            </div>
-            <div>
-              <h1>ReactJS</h1>
-            </div>
           </div>
         </div>
         <div className="pt-4">

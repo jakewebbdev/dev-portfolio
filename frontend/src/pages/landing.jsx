@@ -5,9 +5,9 @@ const Landing = () => {
   return (
     <section id="landing">
       <div className="h-screen flex items-center justify-center">
-        <div className="space-y-2">
+        <div className="space-y-2 md:container md:mx-auto px-4">
           <p className="text-6xl text-center text-white">Welcome!</p>
-          <p className="text-2xl text-white">
+          <p className="text-2xl text-white text-center">
             My name is{" "}
             <span className="text-utorange font-semibold">Jake Webb</span>, I'm
             a Full Stack Web Developer.
@@ -36,7 +36,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="absolute bottom-2 left-2">
-          <Link to="/about">
+          <Link to="/about-me">
             <Logo className="h-20 w-20" />
           </Link>
         </div>

@@ -1,6 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../images/logos/jw-empty-bacground-white.svg";
 import { useState, useEffect } from "react";
+import { Github, Linkedin } from "@icons-pack/react-simple-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,9 @@ const Navbar = () => {
         `${isScroll ? "border-b-2" : "border-none"}`
       }
     >
-      <div className="container mx-auto flex justify-between items-center py-2 md:px-0 px-4">
+      <div className="md:container md:mx-auto flex justify-between items-center py-2 md:px-6 px-4">
         <div>
-          <Link to="/about">
+          <Link to="/about-me">
             <Logo className="h-12 w-12" />
           </Link>
         </div>
@@ -41,11 +42,11 @@ const Navbar = () => {
           <ul className={`md:flex hidden md:space-x-6 md:static absolute`}>
             <li>
               <NavLink
-                to="/about"
+                to="/about-me"
                 activeClassName="text-utorange"
                 className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
               >
-                About
+                About Me
               </NavLink>
             </li>
             <li>
@@ -65,6 +66,19 @@ const Navbar = () => {
               >
                 Contact Me
               </NavLink>
+            </li>
+            <li className="flex items-center">
+              <a href="https://www.linkedin.com/in/jakewebbdev/">
+                <Linkedin
+                  className="text-white hover:text-utorange"
+                  size={18}
+                />
+              </a>
+            </li>
+            <li className="flex items-center">
+              <a href="https://github.com/jakewebbdev">
+                <Github className="text-white hover:text-utorange" size={18} />
+              </a>
             </li>
           </ul>
         </div>
@@ -97,17 +111,17 @@ const Navbar = () => {
       <div class={"w-full md:hidden " + (isOpen ? "block" : "hidden")}>
         <div class="px-2 pt-2 pb-3 space-y-1">
           <NavLink
-            to="/about"
+            to="/about-me"
             activeClassName="text-utorange bg-gray-900 rounded-md"
-            className="text-white block px-3 py-2 text-base font-medium"
+            className="text-white block px-3 py-2 text-base font-medium hover:text-utorange"
             onClick={turnOff}
           >
-            About
+            About Me
           </NavLink>
           <NavLink
             to="/projects"
             activeClassName="text-utorange bg-gray-900 rounded-md"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white hover:bg-utorange block px-3 py-2 rounded-md text-base font-medium"
             onClick={turnOff}
           >
             Projects
@@ -115,11 +129,19 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             activeClassName="text-utorange bg-gray-900 rounded-md"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white hover:bg-utorange block px-3 py-2 rounded-md text-base font-medium"
             onClick={turnOff}
           >
             Contact Me
           </NavLink>
+          <div className="flex space-x-4 px-3 float-left py-2 pb-4">
+            <a href="https://www.linkedin.com/in/jakewebbdev/">
+              <Linkedin className="text-white hover:text-utorange" size={18} />
+            </a>
+            <a href="https://github.com/jakewebbdev">
+              <Github className="text-white hover:text-utorange" size={18} />
+            </a>
+          </div>
         </div>
       </div>
     </header>
