@@ -1,3 +1,34 @@
+import { Github } from "@icons-pack/react-simple-icons";
+import portfolioThumbnail from "../images/portfolio1.png";
+import { Link } from "react-router-dom";
+
+const projects = [
+  {
+    name: "UTK FAC Bodyfarm Web App",
+    github: "na",
+    image: "placeholder",
+    path: "/projects/bodyfarm",
+  },
+  {
+    name: "TeamHealth Network Team Web App",
+    github: "na",
+    image: "placeholder",
+    path: "projects/teamhealth",
+  },
+  {
+    name: "Portfolio",
+    github: "https://github.com/jakewebbdev/dev-portfolio",
+    image: portfolioThumbnail,
+    path: "projects/portfolio",
+  },
+  {
+    name: "More Coming Soon!",
+    github: "https://github.com/jakewebbdev/",
+    image: "placeholder",
+    path: "/projects/coming-soon",
+  },
+];
+
 const Projects = () => {
   return (
     <div className="min-h-screen">
@@ -7,28 +38,45 @@ const Projects = () => {
             Projects
           </h1>
         </div>
-        <div className="md:grid md:grid-cols-3 md:gap-4 pt-6">
-          <div className="bg-white">
-            <h1>Bodyfarm Placeholder</h1>
-          </div>
-          <div className="bg-white">
-            <h1>TeamHealth Placeholder</h1>
-          </div>
-          <div className="bg-white">
-            <h1>Portfolio Site Placeholder</h1>
-          </div>
-          <div className="bg-white">
-            <h1>W.I.P. Bruno CLI</h1>
-          </div>
-          <div className="bg-white">
-            <h1>W.I.P. Jenkins Clone</h1>
-          </div>
-          <div className="bg-white">
-            <h1>W.I.P. Backend Engineering Projects</h1>
-          </div>
-          <div className="bg-white">
-            <h1>Coming Soon!</h1>
-          </div>
+        <div className="md:grid md:grid-cols-4 md:gap-4 pt-6">
+          {projects.map((project) => {
+            return (
+              <div className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2">
+                <div>
+                  <Link to={project.path}>
+                    <img src={project.image} alt="" />
+                  </Link>
+                </div>
+                <div className="flex justify-center text-gray-700">
+                  <h1>{project.name}</h1>
+                </div>
+                <div className="flex px-2">
+                  {project.github === "na" ? (
+                    <div className="flex flex-row space-x-2">
+                      <Github className="text-gray-700" />
+                      <h1 className="text-gray-700">
+                        Unable to show Source Code
+                      </h1>
+                    </div>
+                  ) : (
+                    <a
+                      href={project.github}
+                      className="flex flex-row space-x-2 hover:text-gray-500"
+                    >
+                      <Github className="text-gray-700" />
+                      {project.name === "More Coming Soon!" ? (
+                        <span>Visit my github</span>
+                      ) : (
+                        <span className="text-gray-700 hover:text-gray-500">
+                          Source Code
+                        </span>
+                      )}
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
