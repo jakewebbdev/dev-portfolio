@@ -47,6 +47,7 @@ const About = () => {
               infinite
               isPlaying
               interval="4000"
+              hasMasterSpinner
             >
               <Slider>
                 <Slide index={0}>

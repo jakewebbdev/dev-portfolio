@@ -1,18 +1,20 @@
 import { Github } from "@icons-pack/react-simple-icons";
 import portfolioThumbnail from "../images/portfolio1.png";
+import imagesSoon from "../images/imagessoon.png";
+import wip from "../images/wip.png";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
     name: "UTK FAC Bodyfarm Web App",
     github: "na",
-    image: "placeholder",
+    image: imagesSoon,
     path: "/projects/bodyfarm",
   },
   {
     name: "TeamHealth Network Team Web App",
     github: "na",
-    image: "placeholder",
+    image: imagesSoon,
     path: "projects/teamhealth",
   },
   {
@@ -24,7 +26,7 @@ const projects = [
   {
     name: "More Coming Soon!",
     github: "https://github.com/jakewebbdev/",
-    image: "placeholder",
+    image: wip,
     path: "/projects/coming-soon",
   },
 ];
@@ -32,17 +34,17 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen">
-      <div className="pt-20 md:container md:mx-auto px-4 md:px-6">
+      <div className="pt-20 md:container md:mx-auto px-4 md:px-6 pb-2">
         <div className="flex justify-between border-b-2 border-smokey pb-2">
           <h1 className="text-xl md:text-3xl font-semibold text-utorange">
             Projects
           </h1>
         </div>
-        <div className="md:grid md:grid-cols-4 md:gap-4 pt-6">
+        <div className="md:grid md:grid-cols-4 md:gap-4 pt-6 flex flex-col space-y-4 md:space-y-0">
           {projects.map((project) => {
             return (
               <div className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2">
-                <div>
+                <div className="border-2 border-black rounded">
                   <Link to={project.path}>
                     <img src={project.image} alt="" />
                   </Link>
