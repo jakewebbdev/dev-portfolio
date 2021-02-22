@@ -43,7 +43,10 @@ const Projects = () => {
         <div className="md:grid md:grid-cols-4 md:gap-4 pt-6 flex flex-col space-y-4 md:space-y-0">
           {projects.map((project) => {
             return (
-              <div className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2">
+              <div
+                className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2"
+                key={project.name}
+              >
                 <div className="border-2 border-black rounded">
                   <Link to={project.path}>
                     <img src={project.image} alt="" />

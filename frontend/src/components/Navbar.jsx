@@ -25,6 +25,11 @@ const Navbar = () => {
     });
   }, []);
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <header
       className={
@@ -108,8 +113,8 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <div class={"w-full md:hidden " + (isOpen ? "block" : "hidden")}>
-        <div class="px-2 pt-2 pb-3 space-y-1">
+      <div className={"w-full md:hidden " + (isOpen ? "block" : "hidden")}>
+        <div className="px-2 pt-2 pb-3 space-y-1">
           <NavLink
             to="/about-me"
             activeClassName="text-utorange bg-gray-900 rounded-md"
@@ -135,12 +140,18 @@ const Navbar = () => {
             Contact Me
           </NavLink>
           <div className="flex space-x-4 px-3 float-left py-2 pb-4">
-            <a href="https://www.linkedin.com/in/jakewebbdev/">
+            <button
+              onClick={() =>
+                openInNewTab("https://www.linkedin.com/in/jakewebbdev/")
+              }
+            >
               <Linkedin className="text-white hover:text-utorange" size={18} />
-            </a>
-            <a href="https://github.com/jakewebbdev">
+            </button>
+            <button
+              onClick={() => openInNewTab("https://github.com/jakewebbdev")}
+            >
               <Github className="text-white hover:text-utorange" size={18} />
-            </a>
+            </button>
           </div>
         </div>
       </div>
