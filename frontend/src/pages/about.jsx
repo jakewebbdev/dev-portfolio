@@ -14,7 +14,7 @@ const About = () => {
           <h1 className="text-3xl font-semibold text-utorange">About Me</h1>
           <Link
             className="underline hover:text-utorange focus:outline-none flex items-center text-white"
-            to="/files/Resume.pdf"
+            to="/files/TylerWebbResume.pdf"
             target="_blank"
             download
           >
