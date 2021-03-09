@@ -9,7 +9,8 @@ const Landing = () => {
           <p className="text-6xl text-center text-white">Welcome!</p>
           <p className="text-2xl text-white text-center">
             My name is{" "}
-            <span className="text-utorange font-semibold">Jake Webb</span>.
+            <span className="text-utorange font-semibold">Jake Webb</span>, I am
+            a software engineer.
           </p>
           <div className="flex items-center justify-center pt-6">
             <Link

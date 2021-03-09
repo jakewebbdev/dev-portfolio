@@ -68,30 +68,40 @@ const About = () => {
           <div className="p-6 text-lg space-y-4">
             <p className="">
               Hello! My name is Tyler Webb, but I like to go by Jake. I am
-              currently a 22 year old Computer Science student at the University
-              of Tennessee, Knoxville. I will be graduating in May 2021, with a
-              Bachelor of Science in Computer Science.
+              engaged and live with my fiance and our two dogs. My favorite
+              hobbies include working out, playing video games, and watching
+              sports. I am currently a 22 year old Computer Science student at
+              the University of Tennessee, Knoxville. I will be graduating in
+              May 2021, with a Bachelor of Science in Computer Science.
             </p>
             <p className="">
-              Along with that, I am an aspiring software engineer looking for a
-              full stack or frontend developer role. I have a background in full
-              stack development from my current internship and an additional
-              position working with the University's Forensic Anthropology
-              Center.
+              I am an aspiring software engineer looking for a full stack or
+              front end developer role. My background is primarily in full stack
+              development. I have garnered this experience from my internship at
+              TeamHealth where I have built a web application for monitoring
+              network assets. I an addition to that, I have worked with the
+              University of Tennessee's Forensic Anthropolgy Center to build a
+              user-friendly and optimized full stack application. For more
+              information on these please view my projects under the projects
+              section or by following{" "}
+              <Link to="/projects" className="underline">
+                this
+              </Link>
+              .
+            </p>
+            <p>
+              For more details on my full stack development journey, I have
+              worked with and built applications using ReactJS and AngularJS for
+              my front end frameworks. For the stylistic aspect I have used
+              TailwindCSS and vanilla CSS. In the matter of backend development
+              I have worked with NodeJS/ExpressJS, NestJS, and Django. Lastly, I
+              have worked with MongoDB and PostgreSQL for data storage.
             </p>
             <p className="">
               Following my experience in full stack development, I have also
               obtained experience working with machine learning, primarily with
               TensorFlow, numerical analysis, systems programming, python
               scripting, and cyber security.
-            </p>
-            <p>
-              For more details on my fullstack development journey, I have
-              worked with and built applications using ReactJS and AngularJS for
-              my frontend frameworks. I have used mainly used tailwindcss and
-              vanilla css for styling. I have worked with NodeJS/Express for my
-              backend framework. I have worked with MongoDB and PostgreSQL for
-              my database.
             </p>
           </div>
         </div>

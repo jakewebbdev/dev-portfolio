@@ -1,5 +1,6 @@
 import { Github } from "@icons-pack/react-simple-icons";
 import portfolioThumbnail from "../images/portfolio1.png";
+import bodyfarmLogin from "../images/bodyfarm-login.png";
 import imagesSoon from "../images/imagessoon.png";
 import wip from "../images/wip.png";
 import { Link } from "react-router-dom";
@@ -8,7 +9,7 @@ const projects = [
   {
     name: "UTK FAC Bodyfarm Web App",
     github: "na",
-    image: imagesSoon,
+    image: bodyfarmLogin,
     path: "/projects/bodyfarm",
   },
   {
@@ -40,16 +41,20 @@ const Projects = () => {
             Projects
           </h1>
         </div>
-        <div className="md:grid md:grid-cols-4 md:gap-4 pt-6 flex flex-col space-y-4 md:space-y-0">
+        <div className="md:grid md:grid-cols-3 md:gap-4 pt-6 flex flex-col space-y-4 md:space-y-0">
           {projects.map((project) => {
             return (
               <div
                 className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2"
                 key={project.name}
               >
-                <div className="border-2 border-black rounded">
-                  <Link to={project.path}>
-                    <img src={project.image} alt="" />
+                <div className="border-2 border-black rounded flex justify-center items-center">
+                  <Link to={project.path} className="w-full">
+                    <img
+                      src={project.image}
+                      alt=""
+                      className="w-full h-auto self-center"
+                    />
                   </Link>
                 </div>
                 <div className="flex justify-center text-gray-700">
