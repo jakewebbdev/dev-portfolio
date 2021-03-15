@@ -15,7 +15,7 @@ const Landing = () => {
           <div className="flex items-center justify-center pt-6">
             <Link
               to="/projects"
-              className="border-2 rounded border-smokey px-6 py-2 inline-block align-middle text-white hover:border-utorange"
+              className="border-2 rounded border-smokey px-6 py-2 inline-block align-middle text-white hover:border-utorange transition duration-500 ease-in-out hover:bg-gray-600"
             >
               <span>View some of my projects!</span>
               <span className="pl-4 flex justify-center">

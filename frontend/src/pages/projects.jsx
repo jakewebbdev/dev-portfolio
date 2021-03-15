@@ -34,10 +34,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page">
       <div className="pt-20 md:container md:mx-auto px-4 md:px-6 pb-2">
         <div className="flex justify-between border-b-2 border-smokey pb-2">
-          <h1 className="text-xl md:text-3xl font-semibold text-utorange">
+          <h1 className="text-xl md:text-5xl font-semibold text-utorange">
             Projects
           </h1>
         </div>
@@ -45,7 +45,7 @@ const Projects = () => {
           {projects.map((project) => {
             return (
               <div
-                className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2"
+                className="bg-white rounded flex flex-col border-2 border-white pb-3 space-y-2 transition duration-500 ease-in-out transform hover:scale-105"
                 key={project.name}
               >
                 <div className="border-2 border-black rounded flex justify-center items-center">

@@ -23,6 +23,7 @@ module.exports = {
       uttorch: "#E65933",
       smokey: "#58595B",
     },
+    fill: (theme) => theme("colors"),
   },
   variants: {
     extend: {},

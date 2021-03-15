@@ -38,14 +38,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page ">
       <div className="md:container md:mx-auto px-4 md:px-6 pt-20 pb-4 md:pb-0">
-        <div className="flex justify-between border-b-2 border-smokey pb-2">
-          <h1 className="text-xl md:text-3xl font-semibold text-utorange">
+        <div className="flex justify-between border-b-2 border-smokey ">
+          <h1 className="text-xl md:text-5xl font-semibold text-utorange">
             Contact Me
           </h1>
           <Link
-            className="underline hover:text-utorange focus:outline-none flex items-center text-white"
+            className="underline hover:text-utorange focus:outline-none flex items-center text-white text-lg transition duration-500 ease-in-out"
             to="/files/TylerWebbResume.pdf"
             target="_blank"
             download
@@ -55,7 +55,7 @@ const Contact = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 stroke="white"
-                className="h-6 w-6 hover:fill-current"
+                className="h-6 w-6 stroke-current fill-gray-800"
               >
                 <path
                   strokeLinecap="round"
@@ -68,9 +68,9 @@ const Contact = () => {
             <span>Download my Resume!</span>
           </Link>
         </div>
-        <div className="flex justify-center pt-6">
+        <div className="flex pt-6">
           <form
-            className="w-full max-w-lg bg-white px-6 py-6 rounded shadow-xl border-4 border-utorange"
+            className="w-full max-w-lg bg-gray-100 px-6 py-6 rounded shadow-xl border-4 border-utorange transition delay-300 duration-500 ease-in transform translate-x-full"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-wrap -mx-3 mb-6">
@@ -141,7 +141,7 @@ const Contact = () => {
             <div className="md:flex md:items-center">
               <div className="md:w-1/3">
                 <button
-                  className="shadow bg-utorange hover:bg-uttorch focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded w-full"
+                  className="antialiased shadow bg-utorange transition duration-500 ease-in-out transform hover:scale-105 focus:shadow-outline focus:outline-none text-gray-800 font-bold py-2 px-4 rounded w-full"
                   type="submit"
                 >
                   Send

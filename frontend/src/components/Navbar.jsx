@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <header
       className={
-        "border-smokey fixed w-full bg-black " +
+        "border-smokey fixed w-full bg-gray-800 " +
         `${isScroll ? "border-b-2" : "border-none"}`
       }
     >
@@ -49,7 +49,7 @@ const Navbar = () => {
               <NavLink
                 to="/about-me"
                 activeClassName="text-utorange"
-                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white transition duration-500 ease-in-out"
               >
                 About Me
               </NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
               <NavLink
                 to="/projects"
                 activeClassName="text-utorange"
-                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white transition duration-500 ease-in-out"
               >
                 Projects
               </NavLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 activeClassName="text-utorange"
-                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white"
+                className="hover:text-utorange text-lg font-bold uppercase focus:outline-none text-white transition duration-500 ease-in-out"
               >
                 Contact Me
               </NavLink>
@@ -75,14 +75,17 @@ const Navbar = () => {
             <li className="flex items-center">
               <a href="https://www.linkedin.com/in/jakewebbdev/">
                 <Linkedin
-                  className="text-white hover:text-utorange"
+                  className="text-white hover:text-utorange transition duration-500 ease-in-out"
                   size={18}
                 />
               </a>
             </li>
             <li className="flex items-center">
               <a href="https://github.com/jakewebbdev">
-                <Github className="text-white hover:text-utorange" size={18} />
+                <Github
+                  className="text-white hover:text-utorange transition duration-500 ease-in-out"
+                  size={18}
+                />
               </a>
             </li>
           </ul>

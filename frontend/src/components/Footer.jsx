@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full bg-utorange">
+    <div className="w-full bg-utorange text-gray-800">
       <div className="md:container md:mx-auto px-4 md:px-6 py-4">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="self-center flex space-x-4">
@@ -20,7 +20,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="self-center flex flex-col items-center justify-center space-y-4">
-            <h1 className="border-b-2 border-black">Built using</h1>
+            <h1 className="border-b-2 border-gray-800">Built using</h1>
             <div className="flex space-x-2">
               <a href="https://reactjs.org/">
                 <ReactJs />

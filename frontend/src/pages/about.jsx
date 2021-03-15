@@ -8,12 +8,14 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen w-full">
+    <section id="about" className="min-h-screen w-full page">
       <div className="pt-20 md:container md:mx-auto text-white px-4 md:px-6 pb-2">
         <div className="flex justify-between border-b-2 border-smokey pb-2">
-          <h1 className="text-3xl font-semibold text-utorange">About Me</h1>
+          <h1 className="text-xl md:text-5xl font-semibold text-utorange">
+            About Me
+          </h1>
           <Link
-            className="underline hover:text-utorange focus:outline-none flex items-center text-white"
+            className="underline hover:text-utorange focus:outline-none flex items-center text-white text-lg transition duration-500 ease-in-out"
             to="/files/TylerWebbResume.pdf"
             target="_blank"
             download
@@ -23,7 +25,7 @@ const About = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 stroke="white"
-                className="h-6 w-6 hover:fill-current"
+                className="h-6 w-6 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -65,7 +67,7 @@ const About = () => {
               </Slider>
             </CarouselProvider>
           </div>
-          <div className="p-6 text-lg space-y-4">
+          <div className="p-6 text-lg space-y-6 bg-gray-700 rounded">
             <p className="">
               Hello! My name is Tyler Webb, but I like to go by Jake. I am
               engaged and live with my fiance and our two dogs. My favorite
