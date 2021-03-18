@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <header
       className={
-        "border-smokey fixed w-full bg-gray-800 " +
+        "border-smokey fixed w-full bg-gray-800 z-10 " +
         `${isScroll ? "border-b-2" : "border-none"}`
       }
     >

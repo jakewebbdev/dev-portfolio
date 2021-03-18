@@ -68,9 +68,9 @@ const Contact = () => {
             <span>Download my Resume!</span>
           </Link>
         </div>
-        <div className="flex pt-6">
+        <div className="flex pt-6 flex-col justify-center items-center">
           <form
-            className="w-full max-w-lg bg-gray-100 px-6 py-6 rounded shadow-xl border-4 border-utorange transition delay-300 duration-500 ease-in transform translate-x-full"
+            className="w-full max-w-lg bg-gray-100 px-6 py-6 rounded shadow-xl border-4 border-utorange"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-wrap -mx-3 mb-6">
